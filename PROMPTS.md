@@ -1,0 +1,12 @@
+# Prompts used in Claude Opus 5.5 (1M context) with medium effort thinking
+I need you to help me design an R package called floaties. Do not write any code or create the package skeleton, this is just a research and planning phase. The core requirements of this package is that it allows the users to create waterfall and swimlane plots for medical data review. Although, we want the users to choose which graphing engine they want: ggplot2, plotly, or echarts4r to create these two plots. I also want the functions to accept domain agnostic datasets as long as they follow certain pre-defined structure so we can just take in the dataset name, the columns and apply tidyeval to do any plot related data manipulation we need, this makes sure that our package works with SDTM/ADaM/any other format as long as they structure it in the way we want them to. Eventually, we may expand to other plots too, but for now let's just focus on these two. Once you're done with the research I also want you to create a CLAUDE.md so it helps with my R package development workflow, I want to make sure that everytime a feature is complete R CMD check is run and we don't have any errors. I also want to follow the tidyverse style guide.
+Can you keep the CLAUDE.md lean. I think it has too much stuff now.
+Can we start with package scaffolding? Make sure that the documentation README.md and DESCRIPTION are filled out, we can use the MIT licence.
+plotly and echarts4r can be import dependencies rather than suggests. You can start with the development of waterfall plot first.
+Can you implement the swimlane plot now?
+The features of the waterfall and swimlane plots are completed now. However, it does not look easy to maintain. There are far too many internal functions to keep track of. Can you go over them and plan for a refactor? I would also be okay if we loose some minor plot enhancement if that increases the long term maintainability of the package.
+I am okay with 1, 3, 4, and 5. But, the breaking change with 2 is not worth the hassle. Can you make those changes?
+  To answer your questions:
+  1. Let's not do data masking, I still need tidyselect.
+  2. We can remove it.
+  3. How about using the checkmate package instead? Let's start using it.

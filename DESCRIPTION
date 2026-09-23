@@ -1,0 +1,37 @@
+Package: floaties
+Title: Waterfall and Swimlane Plots for Medical Data Review
+Version: 0.0.0.9000
+Authors@R: 
+    person("Vedha", "Viyash", , "vedha@appsilon.com", role = c("aut", "cre", "cph"))
+Description: Create waterfall and swimlane plots for clinical and medical
+    data review using a choice of graphics engines: 'ggplot2', 'plotly',
+    or 'echarts4r'. Functions accept any data frame that follows a simple,
+    documented structure, and columns are supplied with tidy evaluation,
+    so the same code works with 'SDTM', 'ADaM', or any other data
+    standard.
+License: MIT + file LICENSE
+URL: https://github.com/vedhav/floaties
+BugReports: https://github.com/vedhav/floaties/issues
+Depends: 
+    R (>= 4.1.0)
+Imports: 
+    checkmate,
+    cli,
+    echarts4r,
+    ggplot2,
+    grDevices,
+    htmltools,
+    htmlwidgets,
+    plotly,
+    rlang,
+    tidyselect
+Suggests: 
+    pharmaverseadam,
+    testthat (>= 3.0.0),
+    vdiffr
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-US
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+LazyData: true
