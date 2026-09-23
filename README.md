@@ -17,6 +17,31 @@ floaties plots it.
 
 > floaties is in early development, so the API may still change.
 
+## Branches in this repository
+
+This repository is also a workshop on building an R package with Claude Code.
+The same package was built several times, each with a different way of
+prompting, and each attempt lives on its own branch:
+
+| Branch | How it was built |
+|---|---|
+| `main` | Research and planning first (including a lean `CLAUDE.md`), then scaffolding, the waterfall plot, the swimlane plot, and a refactor for maintainability. Also holds the workshop slides (`WORKSHOP-SLIDES.pdf`). |
+| `YOLO` | No up-front plan. Requirements arrive one prompt at a time, the way users might ask for them: SDTM support, then interactive engines, then ADaM support. |
+| `parallel` | A separate Claude Code session that spent more time on planning. |
+| `LIVE-WORKSHOP` | Built live during the workshop from two short prompts. |
+
+Each branch has a `PROMPTS.md` file with the exact prompts used, so you can
+compare prompts with results.
+
+The attempts are independent and never meant to be merged, so every branch
+except `main` is an orphan branch: it starts from an empty history and shares
+no commits with the others. Each branch's history then shows only how that
+attempt was built, and you can still compare any two attempts directly:
+
+``` sh
+git diff main YOLO -- R/
+```
+
 ## Installation
 
 Install the development version from GitHub:
